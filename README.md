@@ -1,1 +1,1 @@
-# MazeSolver
+# Maze Solver is a recreational project
