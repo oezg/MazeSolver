@@ -7,7 +7,7 @@ from window import Window
 def main():
     window = Window(800, 600)
     
-    maze = Maze(55, 55, 6, 8, 22, 22, window)
+    Maze(55, 55, 6, 8, 22, 22, window, 0)
 
     
     

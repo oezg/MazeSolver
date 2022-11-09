@@ -4,13 +4,13 @@ from line import Line
 
 class Window:
     def __init__(self, width: int, height: int) -> None:
-        self.__width: int = width
-        self.__height: int = height
-        self.__root: Tk = Tk()
+        self.__width = width
+        self.__height = height
+        self.__root = Tk()
         self.__root.title("Maze Solver")
-        self.__canvas: Canvas = Canvas(self.__root)
+        self.__canvas = Canvas(self.__root)
         self.__canvas.pack()
-        self.__running: bool = False
+        self.__running = False
         self.__root.protocol("WM_DELETE_WINDOW", self.close)
 
     def draw_line(self, line: Line, fill_color: str) -> None:
