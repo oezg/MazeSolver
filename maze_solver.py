@@ -7,9 +7,9 @@ from window import Window
 def main():
     window = Window(800, 600)
     
-    Maze(55, 55, 6, 8, 22, 22, window, 0)
+    maze = Maze(55, 55, 6, 8, 22, 22, window, 0)
 
-    
+    print(maze.solve())
     
     window.wait_for_close()
 

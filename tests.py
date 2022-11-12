@@ -32,15 +32,34 @@ class Tests(unittest.TestCase):
     def test_entrance_and_exit_broken(self):
         num_cols = 12
         num_rows = 5
-        m2 = Maze(0, 0 , num_rows, num_cols, 10, 10)
+        m3 = Maze(0, 0 , num_rows, num_cols, 10, 10)
         self.assertEqual(
-            m2._cells[0][0]._walls["TOP"],
+            m3._cells[0][0]._walls["TOP"],
             False,
         )
         self.assertEqual(
-            m2._cells[4][11]._walls["BOTTOM"],
+            m3._cells[4][11]._walls["BOTTOM"],
             False,
         )
+
+    def test_cells_unvisited(self):
+        num_cols = 5
+        num_rows = 4
+        m4 = Maze(0, 0, num_rows, num_cols, 10, 10)
+        self.assertEqual(
+            m4._cells[0][0].is_visited(),
+            False,
+        )
+        self.assertEqual(
+            m4._cells[2][3].is_visited(),
+            False,
+        )
+        self.assertEqual(
+            m4._cells[1][4].is_visited(),
+            False,
+        )
+        
+
 
 
 if __name__ == "__main__":

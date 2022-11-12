@@ -16,6 +16,17 @@ class Cell:
         self._y2 = 0
         self._win = win
         self._visited = False
+
+    def _get_wall(self, direction):
+        return self._walls.get(direction)
+
+
+    def unvisit(self):
+        if self.is_visited:
+            self._visited = False
+
+    def is_visited(self):
+        return self._visited
     
     def mark_visited(self) -> None:
         self._visited = True
